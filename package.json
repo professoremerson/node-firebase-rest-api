@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/professoremerson/node-firebase-rest-api.git"
+    "url": "git+https://github.com/GersonGabriel0/node-firebase-rest-api"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/professoremerson/node-firebase-rest-api/issues"
+    "url": "https://github.com/GersonGabriel0/node-firebase-rest-api/issues"
   },
-  "homepage": "https://github.com/professoremerson/node-firebase-rest-api#readme",
+  "homepage": "https://github.com/GersonGabriel0/node-firebase-rest-api#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.1",
