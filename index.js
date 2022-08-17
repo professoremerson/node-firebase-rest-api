@@ -1,3 +1,27 @@
+// definindo o strict mode
+'use strict'
+
+//definindo imports
+const expres = require('express')
+const cors = require('cors')
+const config = require('./config')
+
+// Inicializando o Express
+const app = expres()
+
+// Definindo a utilização do JSON no corpo da requisição
+// (Body Parser)
+app.use(expres.json())
+
+// Definindo a utilização do CORS
+// (frontend)
+app.use(cors())
+
+//definindo a porta onde o servidor estara ouvindo
+app.listen(config.port, ()  => console.log('API está rodando em http://localhost' + config.port))
+
+
+/*
 // Definindo imports
 const expres = require('express')
 const cors = require('cors')
@@ -45,6 +69,7 @@ const User = db.collection('users')
  * Definindo as rotas para o CRUD
  * (Sem definição de recursos!!!)
  */
+/*
 // Recuperando todos os documentos da coleção
 app.get("/", async (req,res) => {
   // A constante snapshot ir[a receber o resultado da busca
@@ -114,3 +139,4 @@ app.delete("/:id", async (req,res) =>{
 app.listen(3000, () => {
   console.log('API rodando em http://localhost:3000')
 })
+*/
