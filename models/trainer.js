@@ -1,4 +1,3 @@
-
 //Definindo a classe Trainer
 class Trainer {
     //Implementando o construtor da classe
@@ -15,3 +14,5 @@ class Trainer {
         this.state = state;
     }
 }
+
+module.exports = Trainer

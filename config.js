@@ -18,7 +18,7 @@ const{
     PROJECT_ID,
     STORAGE_BUCKET,
     MESSAGING_SENDER_ID,
-    AOO_ID
+    APP_ID
 } = process.env
 //Definindo obrigatoriedade de parametros
 assert(PORT, 'PORT is required!')
@@ -29,7 +29,7 @@ module.exports ={
     port: PORT,
     host: HOST,
     host_url: HOST_URL,
-    irebaseConfig:{
+    firebaseConfig:{
         apiKey: API_KEY,
         authDomain: AUTH_DOMAIN,
         projectId: PROJECT_ID,
