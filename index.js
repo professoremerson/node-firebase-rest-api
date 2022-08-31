@@ -5,6 +5,7 @@
 const expres = require('express')
 const cors = require('cors')
 const config = require('./config')
+const trainerRoutes = require('./routes/trainer-routes')
 
 // Inicializando o Express
 const app = expres()
@@ -16,6 +17,9 @@ app.use(expres.json())
 // Definindo a utilização do CORS
 // (frontend)
 app.use(cors())
+
+// utilizando as rotas para treinadores 
+app.use('/api', trainerRoutes.routes)
 
 //definindo a porta onde o servidor estara ouvindo
 app.listen(config.port, ()  => console.log('API está rodando em http://localhost' + config.port))

@@ -13,3 +13,5 @@ class Trainer {
         this.state = state;
     }
 }
+
+module.exports = Trainer
