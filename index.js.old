@@ -7,13 +7,13 @@ const firebase = require('firebase')
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: 'AIzaSyDu3_f8ha8ds-8w3fbcKuEoeyPErWRjxIk',
-  authDomain: 'node-firebase-rest-api-501f1.firebaseapp.com',
-  projectId: 'node-firebase-rest-api-501f1',
-  storageBucket: 'node-firebase-rest-api-501f1.appspot.com',
-  messagingSenderId: '773395764473',
-  appId: '1:773395764473:web:ea379d8385ab26df023e28'
-}
+  apiKey: "AIzaSyBIWKp7l6D5MD-Zp4Lb1HfgxbgNfyBFfPA",
+  authDomain: "node-firebase-rest-api-9b86f.firebaseapp.com",
+  projectId: "node-firebase-rest-api-9b86f",
+  storageBucket: "node-firebase-rest-api-9b86f.appspot.com",
+  messagingSenderId: "385606925095",
+  appId: "1:385606925095:web:6599d37108bd756e438702"
+};
 
 // Inicializando o Firebase
 firebase.initializeApp(firebaseConfig)
