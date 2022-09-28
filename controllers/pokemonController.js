@@ -3,7 +3,7 @@
 
 // Definindo imports
 const firebase = require('../db')
-const Pokemon = require('../models/Pokemon')
+const Pokemon = require('../models/pokemon')
 const firestore = firebase.firestore()
 
 // Criando o método para adicionar um novo Pokémon
