@@ -1,3 +1,4 @@
+// Definindo os 'imports'
 const repBase = require('../bin/base/repository-base')
 
 class trainerRepository {
@@ -6,22 +7,15 @@ class trainerRepository {
   }
 
   async create(data) {
-    let trainerCreated = await this._repBase.create(data)
-    return this._repBase.getById(trainerCreated.id)
+    return await this._repBase.create(data)
   }
 
   async update(id, data) {
-    let trainerUpdated = await this._repBase.update(id, {
-      name: data.name,
-      age: data.age,
-      city: data.city,
-      state: data.state
-    })
-    return this._repBase.getById(trainerUpdated.id)
+    return await this._repBase.update(id, data)
   }
 
-  async GetAll() {
-    return await this._repBase.GetAll()
+  async getAll() {
+    return await this._repBase.getAll()
   }
 
   async getById(id) {
@@ -32,5 +26,4 @@ class trainerRepository {
     return await this._repBase.delete(id)
   }
 }
-
 module.exports = trainerRepository
