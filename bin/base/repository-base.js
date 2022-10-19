@@ -11,8 +11,6 @@ class repositoryBase {
     this._collection = collection
   }
 
-  modelBase = require('../../models/' + this._model)
-
   async create(data) {
     let res = await firestore.collection(this._collection).doc().set(data)
     return res

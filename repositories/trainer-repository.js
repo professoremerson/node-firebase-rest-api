@@ -20,7 +20,7 @@ class trainerRepository {
     return this._repBase.getById(trainerUpdated.id)
   }
 
-  async GetAll() {
+  async getAll() {
     return await this._repBase.GetAll()
   }
 
