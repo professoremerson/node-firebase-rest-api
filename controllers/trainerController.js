@@ -33,7 +33,7 @@ trainerController.prototype.get = async (req, res) => {
   ctrlBase.get(_repo, req, res)
 }
 
-trainerController.prototype.getByID = async (req, res) => {
+trainerController.prototype.getById = async (req, res) => {
   ctrlBase.getById(_repo, req, res)
 }
 

@@ -12,14 +12,12 @@ class repositoryBase {
   }
 
   async create(data) {
-    let res = await firestore.collection(this._collection).doc().set(data)
-    return res
+    return await firestore.collection(this._collection).doc().set(data)
   }
 
   async update(id, data) {
     let doc = await firestore.collection(this._collection).doc(id)
-    let res = await doc.update(data)
-    return res
+    return await doc.update(data)
   }
 
   async getAll() {
@@ -48,7 +46,7 @@ class repositoryBase {
   }
 
   async delete(id) {
-    return await firebase.collection(this._collection).doc(id).delete()
+    return await firestore.collection(this._collection).doc(id).delete()
   }
 }
 
