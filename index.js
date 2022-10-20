@@ -22,7 +22,7 @@ app.use(cors())
 // utilizando as rotas para pokémon
 app.use('/api', pokemonRoutes.routes)
 // utilizando as rotas para trainers
-app.use('/api/trainers', trainerRoutes)
+app.use('/api/trainers', trainerRoutes.routes)
 
 // Definindo a porta onde o servidor estará ouvindo
 app.listen(config.port, () =>

@@ -19,4 +19,6 @@ router.put('/:id', _ctrl.put)
 router.delete('/:id', _ctrl.delete)
 
 // exportando o módulo
-module.exports = router
+module.exports = {
+  routes: router
+}
