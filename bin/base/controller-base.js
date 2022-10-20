@@ -12,7 +12,9 @@ exports.post = async (repository, validator, req, res) => {
       return
     }
     await repository.create(data)
-    res.status(201).send('Treinador cadastrado com sucesso!')
+    res.status(201).send({
+      message: 'Treinador cadastrado com sucesso!'
+    })
   } catch (err) {
     console.log('Post com erro! Motivo: ', err)
     res.status(500).send({
@@ -36,7 +38,9 @@ exports.put = async (repository, validator, req, res) => {
       return
     }
     await repository.update(req.params.id, data)
-    res.status(202).send('Treinador atualizado com sucesso!')
+    res.status(202).send({
+      message: 'Treinador atualizado com sucesso!'
+    })
   } catch (err) {
     console.log('Put com erro! Motivo: ', err)
     res.status(500).send({
