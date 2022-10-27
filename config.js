@@ -13,6 +13,7 @@ const {
   PORT,
   HOST,
   HOST_URL,
+  SECRETKEY,
   API_KEY,
   AUTH_DOMAIN,
   PROJECT_ID,
@@ -30,6 +31,7 @@ module.exports = {
   port: PORT,
   host: HOST,
   url: HOST_URL,
+  secretKey: SECRETKEY,
   firebaseConfig: {
     apiKey: API_KEY,
     authDomain: AUTH_DOMAIN,
