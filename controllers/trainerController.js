@@ -4,6 +4,7 @@ const trainerRepository = require('../repositories/trainer-repository')
 const ctrlBase = require('../bin/base/controller-base')
 const validators = require('../bin/lib/validators')
 const jwt = require('jsonwebtoken')
+const md5 = require('md5')
 const config = require('../config')
 
 const _repo = new trainerRepository()
@@ -17,6 +18,9 @@ trainerController.prototype.post = async (req, res) => {
   _validator.isRequired(req.body.userName, 'Informe o seu nome de usuário')
   _validator.isRequired(req.body.email, 'Informe o seu email')
   _validator.isEmail(req.body.email, 'O email informado é inválido')
+  _validator.isRequired(req.body.password, 'Informe a sua senha')
+
+  req.body.password = md5(req.body.password)
 
   ctrlBase.post(_repo, _validator, req, res)
 }
@@ -58,7 +62,8 @@ trainerController.prototype.authenticate = async (req, res) => {
     })
   }
 
-  let trainer = await _repo.authenticate(req.body.email, req.body.senha)
+  let trainer = await _repo.authenticate(req.body.email, req.body.password)
+  //console.log(trainer)
   if (trainer) {
     res.status(200).send({
       trainer: trainer,
